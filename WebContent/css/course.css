@@ -1,0 +1,12 @@
+.course-header .header-img{
+	height: 20px;
+	width: 89px;
+	position:absolute;
+	background: url(../imgs/for_teacher.png) no-repeat;
+	top: 0px;
+	right: 0px;
+	transition:all 0.3s;
+}
+.course-header .header-img:hover{
+	right:-10px;
+}

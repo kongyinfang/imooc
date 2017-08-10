@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>计划</title>
+	<meta name="viewport" content="width=device-width initial-scale=1 maximun-scale=1 user-scaleble=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/swiper/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/project.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	
+	<!-- bootstrap插件 -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/project.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+
+	<!-- 考虑低版本IE的js兼容 -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand"><img src="imgs/logo.png"  width=86 alt=""></a>
+			</div>
+			<div class="collapse navbar-collapse" id="nav-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="Course.html">课程</a>
+					</li>
+					<li>
+						<a href="Project.html" style="background:#363c41">计划</a>
+					</li>
+					<li>
+						<a href="Share.html">分享</a>
+					</li>
+					<li>
+						<a href="Community.html">社区</a>
+					</li>
+				</ul>
+				<form id="form-header" method="post" action="" class="navbar-form navbar-right">
+					<button type="button" class=" list btn btn-success signin" data-toggle="modal" data-target="#log">登录</button>
+					<button type="button" class="btn btn-info register" data-toggle="modal" data-target="#login">注册</button>
+					<span class="username button2" style="color:#fff">username</span>
+					<button type="button" class="btn btn-danger button2 logoutBtn" data-toggle="modal" data-target="">注销</button>
+					<input type="search" placeholder="请输入想要搜索的内容" class="form-control">
+					<button type="button" class="btn btn-warning" id="search">Search</button>
+				</form>
+			</div>			
+		</div>
+		
+		<div class="modal fade" id="log" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+		<form method="post" action="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">登录</h4>
+					</div>
+
+					<div class="modal-body myModal">
+						<p id="userName" class="">
+							<label class="">用户名</label>
+							<input id="username" type="text" name="userName" class="" placeholder="手机/用户名" value="12311">
+						</p>
+						<p id="userName" class="">
+							<label class="">密 码 </label>
+							<input id="password" type="password" name="userName" class="" placeholder="密码" value="123456">
+						</p>
+						<button class="btn btn-primary log" id="loginBtn">登录</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+
+		<div class="modal fade" id="login" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+		<form method="post" action="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">注册</h4>
+					</div>
+
+					<div class="modal-body myModal">
+						<p id="userName" class="">
+							<label class="">用户名</label>
+							<input id="rname" type="text" name="userName" class="" placeholder="手机/用户名">
+						</p>
+						<p id="psword" class="">
+							<label> 密 码  </label>
+							<input id="rpwd" type="password" name="psword" class="" placeholder="密码">
+						</p>
+						<p id="address" class="">
+							<label> 电 话  </label>
+							<input id="rtel" type="text" name="address" class="" placeholder="电话">
+						</p>
+						<button class="btn btn-primary log" id="register">注册</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger"
+						data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+	</nav>
+
+
+	<div class="container-fluid body-top">
+		<div class="container">
+			<div class="course-header">
+				<h3>求职路线</h3>
+				<div class="header-img"></div>
+			</div>
+			<div class="course-list">
+				<ul class="clearfix">
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/5d5ce433e18e938929004bbfe165da0f.jpg" alt="">
+							<h4>Java 面向对象编程</h4>
+							<p>Java编程语言，面向对象编程思想</p>
+							<span>更新完毕</span>
+							<span>5920人次学习</span>
+                        </a>
+	                    <span class="tip"> 48分钟29秒 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/bdd29ef9922adf643a169e7378ade986.jpg" alt="">
+							<h4>数据库编程 MySQL入门到精通教程</h4>
+							<p>通过一些SQL查询案例完善学习知识</p>
+							<span>更新完毕</span>
+							<span>2950人次学习</span>
+                        </a>
+	                    <span class="tip"> 2小时07分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/3a9d9e42c04f81f4edd3c4caaabc5dbd.jpg" alt="">
+							<h4>HBase Java 编程</h4>
+							<p>安装 HBase 的集群</p>
+							<span>更新完毕</span>
+							<span>3656人次学习</span>
+                        </a>
+	                    <span class="tip"> 1小时13分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/c00831759bbf9f179396b0120bcf531e.jpg" alt="">
+							<h4>Android开发之网络编程实战</h4>
+							<p>网络编程实战</p>
+							<span>更新完毕</span>
+							<span>4765人次学习</span>
+                        </a>
+	                    <span class="tip"> 2小时29分钟 | 初级</span>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="course-header">
+				<h3>加薪利器</h3>
+				<div class="header-img"></div>
+			</div>
+			<!-- 分类开始 -->
+			<div class="kinds clearfix">
+				<div class="kinds-header">方向:</div>
+				<ul class="kinds-ul">
+					<li><a href="#" class="all">全部</a></li>
+					<li><a href="#">前端开发</a></li>
+					<li><a href="#">后端开发</a></li>
+					<li><a href="#">移动开发</a></li>
+					<li><a href="#">数据处理</a></li>
+					<li><a href="#">图像处理</a></li>
+				</ul>
+			</div>
+			<div>
+				最新 最热
+			</div>
+			<!-- 分类结束 -->
+			<div class="course-list">
+				<ul class="clearfix">
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/9312a106e3fbd0a6bc597438003d1b5f.jpg" alt="">
+							<h4>Linux网络编程</h4>
+							<p>8Linux网络编程</p>
+							<span>更新完毕</span>
+							<span>2883人次学习</span>
+                        </a>
+	                    <span class="tip"> 2小时17分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/98a6465abe9fa32cb61e00c19747037c.jpg" alt="">
+							<h4>Android开发之网络编程基础</h4>
+							<p>Android开发之网络编程基础</p>
+							<span>更新完毕</span>
+							<span>4676人次学习</span>
+                        </a>
+	                    <span class="tip"> 55分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/9391b252c0eb9211101585d49f6c86c7.jpg" alt="">
+							<h4>Python网络编程基础篇</h4>
+							<p>Python中Socket编程基础知识</p>
+							<span>更新完毕</span>
+							<span>8391人次学习</span>
+                        </a>
+	                    <span class="tip"> 23分钟01秒 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/a9b5807c5bd817bab66e2671920eb4ae.jpg" alt="">
+							<h4>C语言编程</h4>
+							<p>C语言基础语法</p>
+							<span>更新完毕</span>
+							<span>4980人次学习</span>
+                        </a>
+	                    <span class="tip"> 2小时06分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/df59bbc97b697c2427ea79676da2efc3.jpg" alt="">
+							<h4>Java编程基础</h4>
+							<p>Java语言编程开发技术</p>
+							<span>更新完毕</span>
+							<span>1.3万人次学习</span>
+                        </a>
+	                    <span class="tip"> 55分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/567546909ac3fc4433e99f00d5cc49e6.jpg" alt="">
+							<h4>C++编程：面向对象C++</h4>
+							<p>C++面向对象技术、编译技术、异常处理技术</p>
+							<span>更新完毕</span>
+							<span>2036人次学习</span>
+                        </a>
+	                    <span class="tip"> 15分钟02秒 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/2f2f64e6811e8fc2b74b573c97e0a53b.jpg" alt="">
+							<h4>软件测试 C编程基础入门</h4>
+							<p>软件测试，编程基础入门课程</p>
+							<span>更新完毕</span>
+							<span>1994人次学习</span>
+                        </a>
+	                    <span class="tip"> 23分钟 | 初级</span>
+					</li>
+					<li class="col-md-3"><a href="#">
+							<img style="width:240px; height:135px" src="imgs/df8130cffe2a8801364deaf42cd59ad7.jpg" alt="">
+							<h4>Python多线程编程</h4>
+							<p>多线程编程代码示例</p>
+							<span>更新完毕</span>
+							<span>5368人次学习</span>
+                        </a>
+	                    <span class="tip"> 11分钟13秒 | 初级</span>
+					</li>
+				</ul>
+			</div>
+			<div class="pages">
+				<span class="first-page">首页</span>
+				<span class="prev-page">上一页</span>
+				<a href="#" class="active">1</a>
+				<a href="#">2</a>
+				<a href="#" class="next-page">下一页</a>
+				<a href="#" class="end-page">尾页</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer container-fluid navbar-inverse">
+		<div class="container clearfix">
+			<ul>
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">慕课云</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">讲师招聘</a></li>
+				<li><a href="#">意见反馈</a></li>
+				<li><a href="#">友情链接</a></li>
+			</ul>
+			<div class="footer-icon">
+				<a href="#" class="weixin"><div class="weixin-tip"></div></a>
+				<a href="#" class="weibo"><div class="weibo-tip"></div></a>
+				<a href="#" class="qq"><div class="qq-tip"></div></a>
+			</div><br/>
+			<p>Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+		</div>
+	</div>
+	<div class="footer-float">
+		<a href="#" class="weixin"><div class="weixin-tip"></div></a>
+		<a href="#" class="msg"></a>
+		<a href="#" class="app"><div class="app-tip"></div></a>
+		<a href="#" class="top"></a>
+	</div>
+</body>
+</html>

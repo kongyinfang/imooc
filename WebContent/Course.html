@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>课程</title>
+	<meta name="viewport" content="width=device-width initial-scale=1 maximun-scale=1 user-scaleble=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/swiper/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/course.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	
+	<!-- bootstrap插件 -->
+	
+	<!-- 考虑低版本IE的js兼容 -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand"><img src="imgs/logo.png"  width=86 alt=""></a>
+			</div>
+			<div class="collapse navbar-collapse" id="nav-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="Course.html" style="background:#363c41">课程</a>
+					</li>
+					<li>
+						<a href="Project.html">计划</a>
+					</li>
+					<li>
+						<a href="Share.html">分享</a>
+					</li>
+					<li>
+						<a href="Community.html">社区</a>
+					</li>
+				</ul>
+				<form id="form-header" method="post" action="" class="navbar-form navbar-right">
+					<button type="button" class=" list btn btn-success signin" data-toggle="modal" data-target="#log">登录</button>
+					<button type="button" class="btn btn-info register" data-toggle="modal" data-target="#login">注册</button>
+					<span class="username button2" style="color:#fff">username</span>
+					<button type="button" class="btn btn-danger button2 logoutBtn" data-toggle="modal" data-target="">注销</button>
+					<input type="search" placeholder="请输入想要搜索的内容" class="form-control">
+					<button type="button" class="btn btn-warning" id="search">Search</button>
+				</form>
+			</div>			
+		</div>
+		
+		<div class="modal fade" id="log" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+		<form method="post" action="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">登录</h4>
+					</div>
+
+					<div class="modal-body myModal">
+						<p id="userName" class="">
+							<label class="">用户名</label>
+							<input id="username" type="text" name="userName" class="" placeholder="手机/用户名" value="12311">
+						</p>
+						<p id="userName" class="">
+							<label class="">密 码 </label>
+							<input id="password" type="password" name="userName" class="" placeholder="密码" value="123456">
+						</p>
+						<button class="btn btn-primary log" id="loginBtn">登录</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+
+		<div class="modal fade" id="login" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+		<form method="post" action="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">注册</h4>
+					</div>
+
+					<div class="modal-body myModal">
+						<p id="userName" class="">
+							<label class="">用户名</label>
+							<input id="rname" type="text" name="userName" class="" placeholder="手机/用户名">
+						</p>
+						<p id="psword" class="">
+							<label> 密 码  </label>
+							<input id="rpwd" type="password" name="psword" class="" placeholder="密码">
+						</p>
+						<p id="address" class="">
+							<label> 电 话  </label>
+							<input id="rtel" type="text" name="address" class="" placeholder="电话">
+						</p>
+						<button class="btn btn-primary log" id="register">注册</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger"
+						data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+	</nav>
+
+	<div class="container-fluid body-top">
+		<div class="container">
+			<div class="course-header ">
+				<h3 >全部课程</h3>
+				<div class="header-img"></div>
+			</div>
+			<!-- 分类开始 -->
+			<div id ="li-a">
+			<div class="kinds clearfix">
+				<div class="kinds-header">方向:</div>
+				<ul class="kinds-ul" id ="ul-d">
+					<li><a href="#" name="course_rank" class="all current">全部</a></li>
+					<li><a href="#">前端开发</a></li>
+					<li><a href="#">后台开发</a></li>
+					<li><a href="#">移动开发</a></li>
+					<li><a href="#">数据处理</a></li>
+					<li><a href="#">图像处理</a></li>
+				</ul>
+			</div>
+			<div class="kinds clearfix">
+				<div class="kinds-header">分类:</div>
+				<ul class="kinds-ul"  id="ul-c">
+					<li><a href="#" class="all current">全部</a></li>
+					<li><a href="#">算法</a></li>
+					<li><a href="#">JS</a></li>
+					<li><a href="#">Linux</a></li>
+					<li><a href="#">C</a></li>
+					<li><a href="#">Shell</a></li>
+					<li><a href="#">Python</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">Android</a></li>
+					<li><a href="#">JQuery</a></li>
+					<li><a href="#">Bootstrop</a></li>
+				</ul>
+			</div>
+			<div class="kinds clearfix">
+				<div class="kinds-header">难度:</div>
+				<ul class="kinds-ul" id="ul-r">
+					<li><a href="#" name="course_rank" class="all current">全部</a></li>
+					<li><a href="#" >初级</a></li>
+					<li><a href="#">中级</a></li>
+					<li><a href="#">高级</a></li>
+				</ul>
+			</div>
+			</div>
+			<div>
+				最新 最热
+			</div>
+			<!-- 分类结束 -->
+	
+
+			<div class="course-list">
+				<ul class="clearfix addDataCourse">
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/156.jpg" alt=""><h4>大数据入门到精通</h4><p>大数据入门到精通</p><span>更新完毕</span><span>77765浜哄涔�</span><span class="tip">4小时|中级</span></a>
+					</li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/250.jpg" alt=""><h4>python网络编程基础篇</h4><p>Python中Socket编程基础知识</p><span>更新完毕</span><span>4523浜哄涔�</span><span class="tip">3小时|初级</span></a></li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/252.jpg" alt=""><h4>Shell典型应用</h4><p>Shell典型应用12</p><span>更新完毕</span><span>23122浜哄涔�</span><span class="tip">3小时2分|中级</span></a></li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/253.jpg" alt=""><h4>算法的乐趣</h4><p>经典算法大全</p><span>更新完毕</span><span>121浜哄涔�</span><span class="tip">1小时|中级</span></a></li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/254.jpg" alt=""><h4>Python开发基础到实战</h4><p>Python语法详解</p><span>更新完毕</span><span>3421浜哄涔�</span><span class="tip">3小时|中级</span></a></li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/255.jpg" alt=""><h4>Python多线程编程</h4><p>线程的魅力</p><span>更新完毕</span><span>2343251浜哄涔�</span><span class="tip">4小时|高级</span></a></li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/256.jpg" alt=""><h4>MySQL入门到精通教程</h4><p>带你走进MySQL世界</p><span>连载ing</span><span>24122浜哄涔�</span><span class="tip">2小时|中级</span></a></li>
+					<li class="col-md-3"><a href="#"><img style="width:240px; height:135px" src="imgs/257.jpg" alt=""><h4>Linux网络编程</h4><p>打开Linux的大门</p><span>更新完毕</span><span>2413浜哄涔�</span><span class="tip">3小时|初级</span></a></li>
+					<li class="col-md-3"><a href="#">
+						<img style="width:240px; height:135px" src="imgs/df8130cffe2a8801364deaf42cd59ad7.jpg" alt="">		
+						<h4>Python多线程编程</h4>
+						<p>多线程编程代码示例</p>
+						<span>更新完毕</span>
+						<span>5368人次学习</span>
+                        <span class="tip"> 11分钟13秒 | 初级</span>
+                            </a>                      
+					</li>
+				</ul>
+			</div> 
+			<div class="pages">
+				<span class="first-page">首页</span>
+				<span class="prev-page">上一页</span>
+				<a href="#" class="active">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#" class="next-page">下一页</a>
+				<a href="#" class="end-page">尾页</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer container-fluid navbar-inverse">
+		<div class="container clearfix">
+			<ul>
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">慕课云</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">讲师招聘</a></li>
+				<li><a href="#">意见反馈</a></li>
+				<li><a href="#">友情链接</a></li>
+			</ul>
+			<div class="footer-icon">
+				<a href="#" class="weixin"><div class="weixin-tip"></div></a>
+				<a href="#" class="weibo"><div class="weibo-tip"></div></a>
+				<a href="#" class="qq"><div class="qq-tip"></div></a>
+			</div><br/>
+			<p>Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+		</div>
+	</div>
+	<div class="footer-float">
+		<a href="#" class="weixin"><div class="weixin-tip"></div></a>
+		<a href="#" class="msg"></a>
+		<a href="#" class="app"><div class="app-tip"></div></a>
+		<a href="#" class="top"></a>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/course.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+
+	
+</body>
+</html>

@@ -1,0 +1,22 @@
+.share-title{
+	background:url(../imgs/corp_banner_top.jpg);
+	height: 240px;
+    width: 100%;
+}
+.share-banner{
+	text-align:center;
+}
+.share-banner a{
+	opacity: 0.7;
+}
+
+.share-banner a:hover{
+	opacity:1;
+}
+.share-banner .title{
+	color:#fff;
+	font-size:25px;
+	opacity:1;
+	margin-top:48px;
+	font-weight: bold;
+}

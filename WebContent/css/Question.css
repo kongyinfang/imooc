@@ -1,0 +1,15 @@
+#question a{
+	display: inline-block;
+	text-decoration: none;
+	color:#000;
+	margin:10px auto;
+	font-size:28px;
+}
+li{
+	list-style-type: none;
+	font-size:24px;
+}
+#questionBtn{
+	margin-left:300px;
+	margin-top:10px;
+}

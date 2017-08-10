@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>分享</title>
+	<meta name="viewport" content="width=device-width initial-scale=1 maximun-scale=1 user-scaleble=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/swiper/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/share.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	
+	<!-- bootstrap插件 -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/share.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+
+	<!-- 考虑低版本IE的js兼容 -->
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand"><img src="imgs/logo.png"  width=86 alt=""></a>
+			</div>
+			<div class="collapse navbar-collapse" id="nav-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="Course.html">课程</a>
+					</li>
+					<li>
+						<a href="Project.html">计划</a>
+					</li>
+					<li>
+						<a href="Share.html" style="background:#363c41">分享</a>
+					</li>
+					<li>
+						<a href="Community.html">社区</a>
+					</li>
+				</ul>
+				<form id="form-header" method="post" action="" class="navbar-form navbar-right">
+					<button type="button" class=" list btn btn-success signin" data-toggle="modal" data-target="#log">登录</button>
+					<button type="button" class="btn btn-info register" data-toggle="modal" data-target="#login">注册</button>
+					<span class="username button2" style="color:#fff">username</span>
+					<button type="button" class="btn btn-danger button2 logoutBtn" data-toggle="modal" data-target="">注销</button>
+					<input type="search" placeholder="请输入想要搜索的内容" class="form-control">
+					<button type="button" class="btn btn-warning" id="search">Search</button>
+				</form>
+			</div>			
+		</div>
+		
+		<div class="modal fade" id="log" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+		<form method="post" action="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">登录</h4>
+					</div>
+
+					<div class="modal-body myModal">
+						<p id="userName" class="">
+							<label class="">用户名</label>
+							<input id="username" type="text" name="userName" class="" placeholder="手机/用户名" value="12311">
+						</p>
+						<p id="userName" class="">
+							<label class="">密 码 </label>
+							<input id="password" type="password" name="userName" class="" placeholder="密码" value="123456">
+						</p>
+						<button class="btn btn-primary log" id="loginBtn">登录</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+
+		<div class="modal fade" id="login" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+		<form method="post" action="">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">注册</h4>
+					</div>
+
+					<div class="modal-body myModal">
+						<p id="userName" class="">
+							<label class="">用户名</label>
+							<input id="rname" type="text" name="userName" class="" placeholder="手机/用户名">
+						</p>
+						<p id="psword" class="">
+							<label> 密 码  </label>
+							<input id="rpwd" type="text" name="psword" class="" placeholder="密码">
+						</p>
+						<p id="address" class="">
+							<label> 电 话  </label>
+							<input id="rtel" type="text" name="address" class="" placeholder="电话">
+						</p>
+						<button class="btn btn-primary log" id="register">注册</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger"
+						data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+	</nav>
+
+
+	<div class="container-fluid share-title body-top">
+		<div class="share-banner">
+			<a href="#"><img src="imgs/5566ff000001faee01200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/5566ff000001faee01200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/565443670001a6c301200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/5566ff33000175f501200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/5566ff1900018a7b01200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/5566ff5100019b0101200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/5566ff3f0001dd6801200060.jpg" alt=""></a>
+			<a href="#"><img src="imgs/556d27200001329901200060.jpg" alt=""></a>
+			<div class="title">
+				分享名企智慧，解密最强代码
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container clearfix">
+			<div class="left" style="margin-left:-40px;">
+				<div class="course-header" style="">
+					<h3>课程</h3>
+					<div class="header-img"></div>
+				</div>
+				<!-- course -->
+				<div class="course-list">
+					<ul class="clearfix"><!-- -->
+						<li class="col-md-4"><a href="#">
+
+						<img src="imgs/1.png" alt="">
+
+					
+
+						<h4>Java入门到开发实战</h4>
+
+						<p>
+
+						详细的介绍了JAVA入门至开发实战	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                3707
+
+                                人学习</span>
+
+                        <span class="tip"> 29小时17分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/2.png" alt="">
+
+					
+
+						<h4>Python入门到开发实战</h4>
+
+						<p>
+
+						详细的介绍了Python入门至开发实战	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                45698
+
+                                人学习</span>
+
+                        <span class="tip"> 16小时56分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/3.png" alt="">
+
+					
+
+						<h4>Git&Github入门基础</h4>
+
+						<p>
+
+						GitHub 使用 Git 作为版本控制系统（version control system）提供在线源码托管的服务，同时是一个有社交功能的开发者社区	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                25696
+
+                                人学习</span>
+
+                        <span class="tip"> 34小时23分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/4.jpg" alt="">
+
+					
+
+						<h4>Android入门到开发实战</h4>
+
+						<p>
+
+						详细的介绍了Android入门至开发实战	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                78546
+
+                                人学习</span>
+
+                        <span class="tip"> 19小时45分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/5.png" alt="">
+
+					
+
+						<h4>HTML入门基础</h4>
+
+						<p>
+
+						纯小白入门教程，适合无任何基础的同学入门	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                65483
+
+                                人学习</span>
+
+                        <span class="tip"> 32小时17分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/6.jpg" alt="">
+
+					
+
+						<h4>大数据工程师入门到开发实战</h4>
+
+						<p>
+
+						详细的介绍了大数据工程师入门到实战	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                5489
+
+                                人学习</span>
+
+                        <span class="tip"> 14小时45分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/551b98ae0001e57906000338-240-135.jpg" alt="">
+
+					
+
+						<h4>深度学习入门</h4>
+
+						<p>
+
+						纯小白入门教程，适合无任何基础的同学入门	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                4589
+
+                                人学习</span>
+
+                        <span class="tip"> 9小时43分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/8.png" alt="">
+
+					
+
+						<h4>机器学习特训营</h4>
+
+						<p>
+
+						本课由工业界大神及知名讲师联合亲授，课程设计从工业界应用出发，偏重实践练习，课后配套真实互联网数据集+课后练习供实战演练。	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                9845
+
+                                人学习</span>
+
+                        <span class="tip"> 15小时57分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/5513a1b50001752806000338-240-135.jpg" alt="">
+
+					
+
+						<h4>如何获得高薪前端工作</h4>
+
+						<p>
+
+						本讲座由前端工程师巨巨来分享，主要分享前端技术，主站开发分类，并且会结合真实例子来讲解	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                7822
+
+                                人学习</span>
+
+                        <span class="tip"> 15小时34分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					<li class="col-md-4"><a href="#">
+
+						<img src="imgs/10.png" alt="">
+
+					
+
+						<h4>基础算法在面试题中的应用</h4>
+
+						<p>
+
+						传奇ACM大神从往年经典的面试题中举例，说明基础的算法与数据结构在面试题中的应用。	
+
+						</p>
+
+						<span>更新完毕</span>
+
+						<span>
+
+                                5469
+
+                                人学习</span>
+
+                        <span class="tip"> 6小时24分钟 | 初级</span>
+
+                            </a>
+
+                       
+
+					</li>
+
+					</ul>
+				</div>
+				<div class="pages">
+					<span class="first-page">首页</span>
+					<span class="prev-page">上一页</span>
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#" class="next-page">下一页</a>
+					<a href="#" class="end-page">尾页</a>
+				</div>
+			</div>
+			<div class="share-right">
+				<div class="course-header">
+					<h3>最新活动</h3>
+					<div class="header-img"></div>
+				</div>
+				<div class="aBlock">
+					<img style="width:240px; height:135px" src="imgs/timg.jpg" alt="">
+				</div>
+				<div class="aBlock">
+					<h2>【上海·小红书】小红书2017校园招聘</h2>
+					<p>网申投递(9.1-9.30) → 空中宣讲(9.22) → 在线测试(9月24) → 面试/电话面试 → 发放Offer(9-10月)
+						投递截止：第一批次 9/30，增补批次截止 10/30
+						注：以上为暂定流程，具体安排以官方通知为准。</p>
+				</div>
+				<div class="aBlock">
+					<h2>【北京·乐视】2017暑期实习生招聘</h2>
+					<p>1.本次招聘流程为：
+						网申（5.30-6.25）
+						5月30号到6月14号投递的：6月14号笔试
+						6月15号到6月20号投递的：6月21号笔试
+						6月21号到6月25号投递的：仅通过简历择优录取
+						面试（6月初-7月初）
+						发放offer（6月底到7月初）
+						2.此次网申为避免网申截止前几日时投递不流畅，请尽快完成网申</p>
+				</div>
+				<div class="aBlock">
+					<h1>我要合作</h1>
+				</div>
+				<div class="aBlock">
+					<p>商务合作请联系
+						QQ: 77963306
+
+						邮箱：admin@nowcoder.com
+
+						微信：www_nowcoder_com
+
+						微博：http://weibo.com/u/2165760972</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="footer container-fluid navbar-inverse">
+		<div class="container clearfix">
+			<ul>
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#">人才招聘</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">慕课云</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">讲师招聘</a></li>
+				<li><a href="#">意见反馈</a></li>
+				<li><a href="#">友情链接</a></li>
+			</ul>
+			<div class="footer-icon">
+				<a href="#" class="weixin"><div class="weixin-tip"></div></a>
+				<a href="#" class="weibo"><div class="weibo-tip"></div></a>
+				<a href="#" class="qq"><div class="qq-tip"></div></a>
+			</div><br/>
+			<p>Copyright © 2015 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+		</div>
+	</div>
+	<div class="footer-float">
+		<a href="#" class="weixin"><div class="weixin-tip"></div></a>
+		<a href="#" class="msg"></a>
+		<a href="#" class="app"><div class="app-tip"></div></a>
+		<a href="#" class="top"></a>
+	</div>
+</body>
